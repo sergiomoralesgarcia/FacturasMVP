@@ -24,9 +24,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         val recycler = binding.FacturaList
         recycler.layoutManager = LinearLayoutManager(this)
         adapter = FacturaAdapter()
-        adapter.setOnItemClickListener {
-            Toast.makeText(this, "Text", Toast.LENGTH_SHORT).show()
-        }
 
         recycler.adapter = adapter
 
