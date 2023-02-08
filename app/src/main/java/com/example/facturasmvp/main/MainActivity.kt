@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         recycler.adapter = adapter
 
         val mainPresenter = MainPresenter(this, MainApi())
-        mainPresenter.getSongs()
+        mainPresenter.getFacturas()
 
         // abrir página filtros
         binding.botonFactura.setOnClickListener {
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     }
 
-    override fun showSongs(songList: MutableList<Factura>) {
+    override fun showFacturas(songList: MutableList<Factura>) {
         adapter.submitList(songList)
 
     }

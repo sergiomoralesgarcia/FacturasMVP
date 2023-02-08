@@ -6,7 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.facturasmvp.databinding.SongListItemBinding
+import com.example.facturasmvp.databinding.ItemFacturaBinding
 
 class FacturaAdapter : ListAdapter<Factura, FacturaAdapter.ViewHolder>(
     DiffCallback
@@ -31,7 +31,7 @@ class FacturaAdapter : ListAdapter<Factura, FacturaAdapter.ViewHolder>(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = SongListItemBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = ItemFacturaBinding.inflate(LayoutInflater.from(parent.context))
         return ViewHolder(binding)
     }
 
@@ -46,7 +46,7 @@ class FacturaAdapter : ListAdapter<Factura, FacturaAdapter.ViewHolder>(
         }
     }
 
-    inner class ViewHolder(private val binding: SongListItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: ItemFacturaBinding): RecyclerView.ViewHolder(binding.root) {
         var container: ConstraintLayout? = null
 
         init {
@@ -55,13 +55,13 @@ class FacturaAdapter : ListAdapter<Factura, FacturaAdapter.ViewHolder>(
 
         fun bind(factura: Factura) {
             val context = binding.importeOrdenacion.context
-            binding.importeOrdenacion.text = context.getString(R.string.song_name_author_format,
+            binding.importeOrdenacion.text = context.getString(R.string.variables_msg,
                 factura.importeOrdenacion.toString())
 
-            binding.descEstado.text = context.getString(R.string.song_name_author_format,
+            binding.descEstado.text = context.getString(R.string.variables_msg,
                 factura.descEstado)
 
-            binding.fecha.text = context.getString(R.string.song_name_author_format,
+            binding.fecha.text = context.getString(R.string.variables_msg,
                 factura.fecha)
 
         }

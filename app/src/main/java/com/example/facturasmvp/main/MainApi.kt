@@ -5,7 +5,7 @@ import com.example.facturasmvp.Factura
 
 class MainApi: MainContract.Api {
 
-    override fun downloadSongs(successListener: (MutableList<Factura>) -> Unit) {
+    override fun downloadFacturas(successListener: (MutableList<Factura>) -> Unit) {
         val random = (0..10).random()
 
         val facturaList = mutableListOf<Factura>()

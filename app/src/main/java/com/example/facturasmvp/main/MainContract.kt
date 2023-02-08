@@ -5,15 +5,15 @@ import com.example.facturasmvp.Factura
 interface MainContract {
 
     interface View {
-        fun showSongs(facturaList: MutableList<Factura>)
+        fun showFacturas(facturaList: MutableList<Factura>)
     }
 
     interface Presenter {
-        fun getSongs()
+        fun getFacturas()
     }
 
     interface Api {
-        fun downloadSongs(successListener: (MutableList<Factura>) -> Unit)
+        fun downloadFacturas(successListener: (MutableList<Factura>) -> Unit)
     }
 }
 
