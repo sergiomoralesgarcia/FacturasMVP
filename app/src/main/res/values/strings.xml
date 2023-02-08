@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FacturasMVP</string>
+    <string name="song_name_author_format">%1$s</string>
+</resources>
