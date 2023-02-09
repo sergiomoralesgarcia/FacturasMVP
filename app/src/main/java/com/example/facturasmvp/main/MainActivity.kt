@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: FacturaAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -40,11 +39,10 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
             dialog.show(supportFragmentManager, "customDialog")
         }
-
     }
 
-    override fun showFacturas(songList: MutableList<Factura>) {
-        adapter.submitList(songList)
+    override fun showFacturas(facturaList: MutableList<Factura>) {
+        adapter.submitList(facturaList)
 
     }
 
