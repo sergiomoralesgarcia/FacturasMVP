@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">FacturasMVP</string>
+    <string name="app_name">ViewNext MVP</string>
     <string name="variables_msg">%1$s</string>
 </resources>
